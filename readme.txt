@@ -48,3 +48,20 @@ Scikit-Learn Linear Regression Model:
 
     Final Prediction for [4, 3] by scikit-learn model: 22.00
     scikit-learn models:	Weights (w1, w2): [2. 3.] || Bias (Intercept): 5.00
+
+
+
+-------------------------------LOGISTIC REGRESSION-----------------------------
+
+PERFORMANCE COMPARISON:
+
+    Custom Model Accuracy: 88.0%
+    SKLearn Model Accuracy: 88.0%
+
+WEIGHTS (Slopes):
+    Custom Weights:  [-0.3246  2.04  ]
+    SKLearn Weights: [-0.3354  2.0786]
+
+BIAS (Intercept):
+    Custom Bias:  0.2179
+    SKLearn Bias: 0.2299
