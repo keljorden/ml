@@ -65,3 +65,15 @@ WEIGHTS (Slopes):
 BIAS (Intercept):
     Custom Bias:  0.2179
     SKLearn Bias: 0.2299
+
+
+
+-------------------------------DECISION TREE-----------------------------
+
+PERFORMANCE COMPARISON :
+
+    Custom Tree Accuracy:  0.9386
+    Sklearn Tree Accuracy: 0.9474
+
+    Custom Tree Time:  1.7376 seconds
+    Sklearn Tree Time: 0.0070 seconds
