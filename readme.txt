@@ -77,3 +77,53 @@ PERFORMANCE COMPARISON :
 
     Custom Tree Time:  1.7376 seconds
     Sklearn Tree Time: 0.0070 seconds
+
+
+------------------------------- RANDOM FOREST V/S SKLearn GRADIENT BOOSTING V/S XGBoost ----------------------------- 
+
+
+        Model  CV Best ROC-AUC  Test ROC-AUC  Minority Recall  Minority Precision  Minority F1  Macro F1  Search Time (s)
+
+      XGBoost           0.9735        0.9781           0.8522              0.9402       0.8941    0.9343            64.38
+   SklearnGBC           0.9712        0.9770           0.7931              0.9527       0.8656    0.9174           107.57
+Random Forest           0.9675        0.9716           0.7635              0.9627       0.8516    0.9093            80.61
+
+
+----------------------------------------------------------------------------------------------------------------------------------
+                                                  DETAILED CLASSIFICATION REPORTS PER MODEL
+----------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------- Random Forest ----------------------------------------
+
+                    precision    recall  f1-score   support
+
+Class 0 (Majority)     0.9428    0.9925    0.9670       797
+Class 1 (Minority)     0.9627    0.7635    0.8516       203
+
+          accuracy                         0.9460      1000
+         macro avg     0.9528    0.8780    0.9093      1000
+      weighted avg     0.9468    0.9460    0.9436      1000
+
+
+---------------------------------------- SklearnGBC ----------------------------------------
+
+                    precision    recall  f1-score   support
+
+Class 0 (Majority)     0.9495    0.9900    0.9693       797
+Class 1 (Minority)     0.9527    0.7931    0.8656       203
+
+          accuracy                         0.9500      1000
+         macro avg     0.9511    0.8915    0.9174      1000
+      weighted avg     0.9501    0.9500    0.9482      1000
+
+
+---------------------------------------- XGBoost ----------------------------------------
+
+                    precision    recall  f1-score   support
+
+Class 0 (Majority)     0.9632    0.9862    0.9746       797
+Class 1 (Minority)     0.9402    0.8522    0.8941       203
+
+          accuracy                         0.9590      1000
+         macro avg     0.9517    0.9192    0.9343      1000
+      weighted avg     0.9586    0.9590    0.9582      1000
