@@ -127,3 +127,61 @@ Class 1 (Minority)     0.9402    0.8522    0.8941       203
           accuracy                         0.9590      1000
          macro avg     0.9517    0.9192    0.9343      1000
       weighted avg     0.9586    0.9590    0.9582      1000
+
+
+
+------------------------------- KNN V/S NAIVE BAYES V/S SVM ----------------------------- 
+
+
+--------------------------------------------------------------------------------
+ MODEL: K-Nearest Neighbors (KNN)
+ Best Params: {'clf__metric': 'manhattan', 'clf__n_neighbors': 3, 'clf__weights': 'uniform'}
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+   malignant     0.9750    0.9286    0.9512        42
+      benign     0.9595    0.9861    0.9726        72
+
+    accuracy                         0.9649       114
+   macro avg     0.9672    0.9573    0.9619       114
+weighted avg     0.9652    0.9649    0.9647       114
+
+Confusion Matrix [Rows: Actual, Cols: Predicted]:
+  Malignant (0):   39 TN  |   3 FP
+  Benign    (1):    1 FN  |  71 TP
+
+
+--------------------------------------------------------------------------------
+ MODEL: Gaussian Naive Bayes
+ Best Params: {'clf__var_smoothing': np.float64(1e-11)}
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+   malignant     0.9048    0.9048    0.9048        42
+      benign     0.9444    0.9444    0.9444        72
+
+    accuracy                         0.9298       114
+   macro avg     0.9246    0.9246    0.9246       114
+weighted avg     0.9298    0.9298    0.9298       114
+
+Confusion Matrix [Rows: Actual, Cols: Predicted]:
+  Malignant (0):   38 TN  |   4 FP
+  Benign    (1):    4 FN  |  68 TP
+
+
+--------------------------------------------------------------------------------
+ MODEL: Support Vector Machine (SVM - RBF)
+Best Params: {'clf__C': 10, 'clf__gamma': 0.01}
+--------------------------------------------------------------------------------
+              precision    recall  f1-score   support
+
+   malignant     0.9762    0.9762    0.9762        42
+      benign     0.9861    0.9861    0.9861        72
+
+    accuracy                         0.9825       114
+   macro avg     0.9812    0.9812    0.9812       114
+weighted avg     0.9825    0.9825    0.9825       114
+
+Confusion Matrix [Rows: Actual, Cols: Predicted]:
+  Malignant (0):   41 TN  |   1 FP
+  Benign    (1):    1 FN  |  71 TP
