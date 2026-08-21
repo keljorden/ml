@@ -185,3 +185,52 @@ weighted avg     0.9825    0.9825    0.9825       114
 Confusion Matrix [Rows: Actual, Cols: Predicted]:
   Malignant (0):   41 TN  |   1 FP
   Benign    (1):    1 FN  |  71 TP
+
+
+
+
+------------------------------- KMeans V/S Hierarchical Clustering V/S DBScan Before and after PCA ----------------------------- 
+
+
+PIPELINE CLUSTERING EVALUATION RESULTS (Before applying PCA):
+
+                       Pipeline      Clusters    Noise Points    Silhouette Score (↑)   Calinski-Harabasz (↑)    Davies-Bouldin (↓)
+
+                 k-mean (k = 3)         3             0               0.4599                  241.90                  0.8336
+
+       Hierarchical (Ward, k=3)         3             0               0.4467                  222.72                  0.8035
+
+DBSCAN (eps=0.8, min_samples=5)         2             4               0.5979                  277.65                  0.5688
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+PCA PIPELINE CLUSTERING EVALUATION (After applying PCA):
+
+                       Pipeline      Clusters    Noise Points    Silhouette Score (↑)   Calinski-Harabasz (↑)    Davies-Bouldin (↓)
+
+                 k-mean (k = 3)         3             0               0.5092                  293.86                  0.7099
+
+       Hierarchical (Ward, k=3)         3             0               0.5111                  286.33                  0.7054
+
+DBSCAN (eps=0.5, min_samples=5)         2            12               0.6580                  370.69                  0.4866
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+How much each original feature contributes to PC1 and PC2 :
+
+k-mean (k = 3) :
+
+ [[ 0.52106591 -0.26934744  0.5804131   0.56485654]
+ [ 0.37741762  0.92329566  0.02449161  0.06694199]]
+
+
+Hierarchical (Ward, k=3) :
+
+ [[ 0.52106591 -0.26934744  0.5804131   0.56485654]
+ [ 0.37741762  0.92329566  0.02449161  0.06694199]]
+
+
+DBSCAN (eps=0.5, min_samples=5) :
+
+ [[ 0.52106591 -0.26934744  0.5804131   0.56485654]
+ [ 0.37741762  0.92329566  0.02449161  0.06694199]]
